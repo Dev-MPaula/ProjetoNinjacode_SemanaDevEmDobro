@@ -1,0 +1,156 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-image: url("../imagens/konoha.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(8px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.ninjacodes {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-ninjacode {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cartao-ninjacode.aberto {
+    display: block;
+}
+
+.cartao-ninjacode img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.cartao-ninjacode .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-ninjacode .nome {
+    margin-bottom: 5px;
+}
+
+.cartao-ninjacode .tipo {
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.cartao-ninjacode .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-ninjacode .informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.cartao-ninjacode .informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+}
+
+.cartao-ninjacode .informacoes .descricao {
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.vento{
+    background-color: #F07D0B;
+}
+
+.fogo {
+    background-color: #1E3A5F;
+}
+
+.terra {
+    background-color: #F8B3C2;
+}
+
+.raio {
+    background-color: #C2C5C9;
+}
+
+.sombra {
+    background-color: #6B7E56;
+}
+
+.ocular {
+    background-color: #C5A6E2;
+}
+
+.listagem {
+    max-width: 200px;
+}
+
+.listagem .ninjacode img {
+    width: 25%;
+}
+
+.listagem .ninjacode {
+    background-color: #6B6B6B ;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 70px;
+
+    transition: 0.15 ease-in-out;
+}
+
+.listagem .ninjacode:hover {
+    transform: scale(1.05);
+}
+
+.listagem .ninjacode span {
+    padding-right: 20px;
+}
+
+.listagem .ninjacode.ativo {
+    background-color: #2F4F4F;
+}
